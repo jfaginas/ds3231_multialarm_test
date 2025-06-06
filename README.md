@@ -75,7 +75,7 @@ La clase AlarmSchedule permite programar intervalos por día. Si un intervalo va
     > SET=06/06/2025 23:58
     Fecha y hora actualizadas.
 
-    > SCHED=5 23:59/00:02
+    > SCHED=5 23:59 00:02
     Programación actualizada.
 
     > SHOW
