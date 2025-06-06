@@ -74,7 +74,6 @@ void SerialCommandManager::update() {
     }
 }
 
-
 void SerialCommandManager::processCommand(const String& command) {
     if (command.length() == 0) return;
 
@@ -155,27 +154,7 @@ void SerialCommandManager::parseSetCommand(const String& command) {
     printLineWithPrompt("");
 }
 void SerialCommandManager::showAllSchedules() {
-//     static const char* days[] = {
-//         "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"
-//     };
 
-//     Serial.println("Programación semanal:");
-
-//     for (int i = 0; i < 7; ++i) {
-//         TimePoint on, off;
-//         Serial.printf("%-12s: ", days[i]);
-//         if (alarmSchedule.isActive(i) && alarmSchedule.getOnOffTime(i, on, off)) {
-//             Serial.printf("%02d:%02d - %02d:%02d", on.hour, on.minute, off.hour, off.minute);
-//             if (on > off) {
-//                 Serial.print(" (día siguiente)");
-//             }
-//             Serial.println();
-//         } else {
-//             Serial.println("No programado");
-//         }
-//     }
-//     printLineWithPrompt("");
-// }
     static const char* days[] = {
         "Domingo    ", "Lunes      ", "Martes     ", "Miércoles  ", "Jueves     ", "Viernes    ", "Sábado     "
     };
