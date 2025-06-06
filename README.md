@@ -1,7 +1,8 @@
-📘 ds3231_multialarm_test
+# ESP32 + RTC DS3231 - Reloj con alarmas semanal programada por terminal
 
 Un ESP32 te permite programar, usando la terminal, múltiples alarmas semanales con horarios personalizados por día, utilizando un reloj de tiempo real DS3231 y un LED indicador.
 Ideal como base para sistemas de automatización más complejos, especialmente con pantallas táctiles como NEXTION.
+Es una versión mejorada del proyecto ds3231_test.
 
 🔧 Características
 
@@ -19,7 +20,7 @@ Ideal como base para sistemas de automatización más complejos, especialmente c
 
 🧱 Estructura del proyecto
 
-'''
+```text
 ds3231_multialarm_test/
 ├── lib/
 │   ├── AlarmSchedule/
@@ -30,7 +31,16 @@ ds3231_multialarm_test/
 │   └── main.cpp
 ├── platformio.ini
 └── README.md
-'''
+```
+## 🔌 Conexiones
+
+---------------------------------------------------------
+| Componente | ESP32 GPIO                               |
+|------------|------------------------------------------|
+| DS3231 SDA | GPIO21                                   |
+| DS3231 SCL | GPIO22                                   |
+| LED        | Interno (GPIO2 en la mayoría de módulos) |
+---------------------------------------------------------
 
 📦 Dependencias
 
@@ -56,7 +66,7 @@ ds3231_multialarm_test/
 
     SHOW: muestra la programación semanal actual.
 
-🧠 Lógica de alarmas
+🧠 Lógica de las alarmas
 
 La clase AlarmSchedule permite programar intervalos por día. Si un intervalo va, por ejemplo, de 23:00 a 01:00, el sistema lo interpreta correctamente como un intervalo que cruza la medianoche, incluso verificando el día anterior si es necesario.
 
@@ -83,12 +93,9 @@ La clase AlarmSchedule permite programar intervalos por día. Si un intervalo va
 - Persistencia en memoria flash o EEPROM.
 - Control de dispositivos reales en lugar de LED.
 
-
 ## 📖 Licencia
 
 Este proyecto está licenciado bajo la licencia MIT.
 
-## ✨ Autor
-
-Proyecto desarrollado por José Faginas como ejercicio de aprendizaje con ESP32 + DS3231.
-# ds3231_multialarm_test
+## 📁 Proyecto
+Desarrollado en PlatformIO con Visual Studio Code, por José Faginas como ejercicio de aprendizaje con ESP32 + DS3231.
